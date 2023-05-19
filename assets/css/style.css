@@ -1,0 +1,29 @@
+* {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.navbar {
+  max-height: 100px;
+  height: 100%;
+  background-color: #2b90e2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  align-items: center;
+}
+
+#my-name {
+  font-size: 70px;
+  color: #f0f8ff;
+}
+
+.navbar-links {
+  font-size: 25px;
+  color: aliceblue;
+  
+}
+
+#background-panorama {
+  max-width: 1920px;
+  width: 100%;
+}
