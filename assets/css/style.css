@@ -5,7 +5,7 @@
   --jewel: #4717f6;
   --stark: #e7dfdd;
   --light: #f0f8ff;
-  /* #2b90e2 */
+  /* old blue  #2b90e2 */
 }
 
 body {
@@ -27,6 +27,8 @@ body {
 #my-name {
   font-size: 70px;
   color: var(--light);
+  padding-left: 15px;
+  border-left: 5px solid var(--fuscia);
 }
 
 .navbar-links a {
@@ -38,27 +40,15 @@ body {
 }
 
 #background-panorama {
-  max-width: 1920px;
-  width: 100%;
-  max-height: 300px;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
-
-.page-bar {
-  background-color: var(--void);
-  height: 75px;
-  position: relative;
-  top: -5px;
-  
+  background-image: url("../images/repeat-coder.gif");
+  background-repeat: repeat;
 }
 
 #about-me {
   display: flex;
   align-items: center;
-  background-color: var(--jewel);
-  color: var(--light);
+  background-color: var(--light);
+  color: var(--void);
   position: relative;
   top: -5px;
 }
@@ -66,10 +56,44 @@ body {
 #about-me h1 {
   font-size: 90px;
   text-align: center;
-  padding: 100px;
+  border-right: 5px solid var(--void);
+  margin: 100px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+
 }
 
 #about-me p {
     font-size: 25px;
     padding: 50px;
+}
+
+#work {
+  display: flex;
+  align-items: center;
+  background-color: var(--light);
+  color: var(--void);
+  position: relative;
+  top: -5px;
+}
+
+#work h1 {
+  font-size: 90px;
+  text-align: center;
+  border-right: 5px solid var(--void);
+  margin: 100px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  max-width:265px;
+  width: 100%;
+}
+
+.work-boxes {
+  display: flex;
+}
+
+#main-project-box {
+  width: 1500px;
+  height:250px;
+  background-color: var(--fuscia);
 }
