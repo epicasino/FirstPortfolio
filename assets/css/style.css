@@ -5,11 +5,17 @@
   --jewel: #4717f6;
   --stark: #e7dfdd;
   --light: #f0f8ff;
+  --backgroundgradient: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+  --box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.815);
   /* old blue  #2b90e2 */
 }
 
 body {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: url("../images/ocean-picture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 25px;
 }
 
 .navbar {
@@ -39,9 +45,14 @@ body {
   margin-right: 20px;
 }
 
+.navbar-links a:hover {
+  border-bottom: #4717f6 5px solid;
+}
+
 #background-panorama {
-  background-image: url("../images/repeat-coder.gif");
-  background-repeat: repeat;
+  max-height: 150px;
+  height: 100%;
+  margin: 200px 0px 200px 0px;
 }
 
 #about-me {
@@ -58,6 +69,7 @@ body {
   text-align: center;
   border-right: 5px solid var(--void);
   margin: 100px;
+  margin-right: 50px;
   padding-right: 50px;
   padding-bottom: 50px;
 
@@ -66,6 +78,11 @@ body {
 #about-me p {
     font-size: 25px;
     padding: 50px;
+    line-height: 30px;
+}
+
+#about-me img {
+  height: 200px;
 }
 
 #work {
@@ -81,7 +98,7 @@ body {
   font-size: 90px;
   text-align: center;
   border-right: 5px solid var(--void);
-  margin: 100px;
+  margin: 100px 150px 100px 100px;
   padding-right: 50px;
   padding-bottom: 50px;
   max-width:265px;
@@ -90,10 +107,92 @@ body {
 
 .work-boxes {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 1250px;
 }
 
-#main-project-box {
-  width: 1500px;
-  height:250px;
-  background-color: var(--fuscia);
+.main-project-box {
+  height: 250px;
+  width: 100%;
+  border: var(--jewel) 5px solid;
+  background-image: url(../images/bi-background-black.png);
+  margin-bottom: 20px;
+}
+
+#work h5 {
+  color: var(--light);
+  font-size: 50px;
+  padding: 10px 0px 5px 15px;
+}
+
+#work p {
+  color: var(--light);
+  font-size: 25px;
+  padding: 10px 0px 5px 15px;
+}
+
+.main-project-box:hover {
+  background: var(--backgroundgradient);
+  box-shadow: var(--box-shadow);
+  opacity: .5;
+  background-image: url(../images/bi-background-black.png);
+}
+
+.side-project-boxes {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: stretch;
+}
+
+#side-project-box {
+  max-height: 225px;
+  max-width: 225px;
+  padding: 25px;
+  border: var(--dark) 5px solid;
+  background-image: url(../images/bi-background-black.png);
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+#side-project-box:hover {
+  background: var(--backgroundgradient);
+  box-shadow: var(--box-shadow);
+  opacity: .5;
+  background-image: url(../images/bi-background-black.png);
+}
+
+#contact-me {
+  margin-top: 100px;
+  max-height: 500px;
+  height: 100%;
+  background-color: var(--void);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 4%;
+  padding-right: 4%; 
+}
+
+#contact-me h1 {
+  color: var(--light);
+  font-size: 90px;
+  text-align: center;
+  border-right: 5px solid var(--light);
+  margin: 100px 150px 100px 0px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  max-width:265px;
+  width: 100%;
+}
+
+.contact-links a {
+  font-size: 25px;
+  text-decoration: none;
+  color: var(--light);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.contact-links a:hover {
+  border-bottom: var(--light) 5px solid;
 }
