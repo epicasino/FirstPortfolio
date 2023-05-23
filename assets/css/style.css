@@ -19,12 +19,11 @@ body {
 }
 
 .navbar {
-  max-height: 100px;
   height: 100%;
   background-color: var(--void);
   display: flex;
   justify-content: space-between;
-  padding: 25px;
+  padding: 5%;
   align-items: center;
   padding-left: 4%;
   padding-right: 4%; 
@@ -37,12 +36,17 @@ body {
   border-left: 5px solid var(--fuscia);
 }
 
+.navbar-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
 .navbar-links a {
   font-size: 25px;
   text-decoration: none;
   color: var(--light);
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 .navbar-links a:hover {
@@ -52,27 +56,26 @@ body {
 #background-panorama {
   max-height: 150px;
   height: 100%;
-  margin: 200px 0px 200px 0px;
+  margin: 15%;
 }
 
 #about-me {
   display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 10%;
   background-color: var(--light);
   color: var(--void);
   position: relative;
   top: -5px;
+  padding: 50px;
 }
 
 #about-me h1 {
   font-size: 90px;
   text-align: center;
   border-right: 5px solid var(--void);
-  margin: 100px;
-  margin-right: 50px;
   padding-right: 50px;
-  padding-bottom: 50px;
-
 }
 
 #about-me p {
@@ -87,18 +90,20 @@ body {
 
 #work {
   display: flex;
+  justify-content: center;
+  gap: 10%;
   align-items: center;
   background-color: var(--light);
   color: var(--void);
   position: relative;
   top: -5px;
+  padding: 50px;
 }
 
 #work h1 {
   font-size: 90px;
   text-align: center;
   border-right: 5px solid var(--void);
-  margin: 100px 150px 100px 100px;
   padding-right: 50px;
   padding-bottom: 50px;
   max-width:265px;
@@ -144,7 +149,7 @@ body {
   align-content: stretch;
 }
 
-#side-project-box {
+.side-project-box {
   max-height: 225px;
   max-width: 225px;
   padding: 25px;
@@ -154,7 +159,7 @@ body {
   margin-bottom: 25px;
 }
 
-#side-project-box:hover {
+.side-project-box:hover {
   background: var(--backgroundgradient);
   box-shadow: var(--box-shadow);
   opacity: .5;
@@ -167,10 +172,10 @@ body {
   height: 100%;
   background-color: var(--void);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding-left: 4%;
-  padding-right: 4%; 
+  padding-left: 10%;
+  padding-right: 10%; 
 }
 
 #contact-me h1 {
@@ -178,7 +183,7 @@ body {
   font-size: 90px;
   text-align: center;
   border-right: 5px solid var(--light);
-  margin: 100px 150px 100px 0px;
+  margin: 100px 0px 100px 0px;
   padding-right: 100px;
   padding-bottom: 50px;
   max-width:265px;
@@ -191,8 +196,155 @@ body {
   color: var(--light);
   margin-left: 20px;
   margin-right: 20px;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .contact-links a:hover {
   border-bottom: var(--light) 5px solid;
+}
+
+/* Phone Screen */
+@media screen and (max-width: 390px) {
+  body {
+    max-width: 390px;
+    width: 100%;
+  }
+
+  .side-project-boxes {
+    justify-content: center;
+  }
+
+  #my-name {
+    font-size: 50px;
+  }
+
+  .navbar-links a {
+    font-size: 20px;
+    text-decoration: underline;
+  }
+
+  #about-me, #work, #contact-me {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    padding: 50px;
+    justify-content: center;
+  }
+  #about-me h1, #work h1 {
+    border-bottom: 5px solid var(--void);
+    border-right: 0px;
+    padding: 0%;
+    font-size: 50px;
+  }
+  #work h5 {
+    padding: 15px 0px 0px 0px;
+    font-size: 30px;
+  }
+  #work p {
+    font-size: 15px;
+  }
+
+  #contact-me h1 {
+    border-bottom: 5px solid var(--light);
+    border-right: 0px;
+    font-size: 50px;
+    padding: 0%;
+    margin: 20px 0px 20px 0px;
+  }
+  #about-me p {
+    padding:0%;
+  }
+  #contact-me a {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .side-project-box {
+    margin: 15px 0px 20px 0px;
+    height: 150px;
+    width: 150px;
+    align-content: center;
+    gap: 15%;
+  }
+  .side-project-box h5 {
+    font-size: 30px;
+    padding: 0%;
+  }
+  .side-project-box p {
+    font-size: 15px;
+    padding: 0%;
+  }
+}
+
+/* Tablet screen */
+@media screen and (max-width: 912px) {
+  body {
+    max-width: 912px;
+    width: 100%;
+    padding: 15px;
+  }
+  .side-project-boxes {
+    justify-content: center;
+  }
+
+  #my-name {
+    font-size: 50px;
+  }
+
+  .navbar-links a {
+    font-size: 20px;
+    text-decoration: underline;
+  }
+
+  #about-me, #work, #contact-me {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    padding: 50px;
+    justify-content: center;
+  }
+  #about-me h1, #work h1 {
+    border-bottom: 5px solid var(--void);
+    border-right: 0px;
+    padding: 0%;
+    font-size: 50px;
+  }
+
+  #work h5 {
+    padding: 15px 0px 0px 0px;
+    font-size: 30px;
+  }
+  #work p {
+    font-size: 15px;
+  }
+
+  #contact-me h1 {
+    border-bottom: 5px solid var(--light);
+    border-right: 0px;
+    font-size: 50px;
+    padding: 0%;
+    margin: 20px 0px 20px 0px;
+  }
+  #about-me p {
+    padding:0%;
+  }
+  #contact-me a {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .side-project-box {
+    margin: 15px 0px 20px 0px;
+    height: 150px;
+    width: 150px;
+    align-content: center;
+    gap: 15%;
+  }
+  .side-project-box h5 {
+    font-size: 30px;
+    padding: 0%;
+  }
+  .side-project-box p {
+    font-size: 15px;
+    padding: 0%;
+  }
 }
