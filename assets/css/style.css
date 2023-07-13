@@ -130,6 +130,12 @@ body {
   padding: 10px 0px 5px 15px;
 }
 
+#work h4 {
+  color: var(--light);
+  font-size: 40px;
+  padding: 10px 0px 5px 15px;
+}
+
 #work p {
   color: var(--light);
   font-size: 25px;
